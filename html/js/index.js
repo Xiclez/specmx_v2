@@ -121,7 +121,7 @@ function renderChart(chartId, labels, data, title, lastUpdate, datasetLabel) {
             datasets: [{
                 label: datasetLabel,
                 data: data,
-                borderColor: 'rgba(75, 192, 192, 1)',
+                borderColor: 'rgba(255, 0, 0, 1)', // Red line
                 borderWidth: 1,
                 fill: false
             }]
@@ -130,11 +130,13 @@ function renderChart(chartId, labels, data, title, lastUpdate, datasetLabel) {
             plugins: {
                 title: {
                     display: true,
-                    text: title
+                    text: title,
+                    color: 'rgba(0, 0, 0, 1)' // White title
                 },
                 subtitle: {
                     display: true,
-                    text: 'Última actualización: ' + lastUpdate
+                    text: 'Última actualización: ' + lastUpdate,
+                    color: 'rgba(0, 0, 0, 1)' // White subtitle
                 },
                 zoom: {
                     pan: {
@@ -154,7 +156,21 @@ function renderChart(chartId, labels, data, title, lastUpdate, datasetLabel) {
             },
             scales: {
                 y: {
-                    beginAtZero: false
+                    beginAtZero: false,
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.2)' // White grid lines
+                    },
+                    ticks: {
+                        color: 'rgba(0, 0, 0, 1)' // White labels
+                    }
+                },
+                x: {
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.2)' // White grid lines
+                    },
+                    ticks: {
+                        color: 'rgba(0, 0, 0, 1)' // White labels
+                    }
                 }
             },
             responsive: true,
@@ -169,6 +185,7 @@ function renderChart(chartId, labels, data, title, lastUpdate, datasetLabel) {
         usdChartInstance = chartInstance;
     }
 }
+
 
 
 // Ajustar el tamaño del gráfico de forma reactiva
