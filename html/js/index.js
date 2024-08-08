@@ -292,25 +292,13 @@ async function updateUSDData() {
 async function fetchDOFUSDData() {
     const today = new Date().toISOString().split('T')[0].split('-').reverse().join('/');
     try {
-        const response = await fetch(`https://cors-anywhere.herokuapp.com/https://dof.gob.mx/indicadores_detalle.php?cod_tipo_indicador=158&dfecha=${today}&hfecha=${today}`);
-        const text = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, 'text/html');
-
-        const table = doc.querySelector('table.Tabla_borde');
-        if (table) {
-            const rows = table.querySelectorAll('tr');
-            const cells = rows[1].querySelectorAll('td');
-
-            const fecha = cells[0].innerText;
-            const valor = cells[1].innerText;
+        const response = await fetch(`http://localhost:3001/api/dof-usd`);
+   
 
             if (document.getElementById('latestUSDPrice')) {
                 document.getElementById('latestUSDPrice').innerText = valor;
             }
-        } else {
-            console.error('Error fetching USD data from DOF: table is null');
-        }
+      
     } catch (error) {
         console.error('Error fetching USD data from DOF: ', error);
     }
