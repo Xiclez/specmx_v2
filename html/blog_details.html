@@ -259,7 +259,7 @@
          const urlParams = new URLSearchParams(window.location.search);
          const postId = urlParams.get('id');
 
-         fetch(`http://localhost:3005/api/blog/posts/${postId}`)
+         fetch(`http://specmx.net/api/blog/posts/${postId}`)
             .then(response => response.json())
             .then(post => {
                document.getElementById('post-title').innerText = post.title;

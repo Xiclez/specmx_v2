@@ -380,7 +380,7 @@
 </section>
 <script>
    $(document).ready(function () {
-       fetch('http://localhost:3005/api/blog/posts?limit=3')
+       fetch('http://specmx.net/api/blog/posts?limit=3')
            .then(response => response.json())
            .then(data => {
                const blogContainer = document.getElementById('blog-preview-container');
