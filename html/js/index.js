@@ -292,7 +292,7 @@ async function updateUSDData() {
 async function fetchDOFUSDData() {
     const today = new Date().toISOString().split('T')[0].split('-').reverse().join('/');
     try {
-        const response = await fetch(`http://localhost:3001/api/dof-usd`);
+        const response = await fetch(`http://specmx.net/api/indicators/dof-usd`);
    
 
             if (document.getElementById('latestUSDPrice')) {
@@ -306,7 +306,7 @@ async function fetchDOFUSDData() {
 
 
 async function fetchIPCData() {
-    const targetUrl = 'http://idosfinance.xyz/api/ipc';
+    const targetUrl = 'http://specmx.net/api/indicators/ipc';
 
     try {
         const response = await fetch(targetUrl);
