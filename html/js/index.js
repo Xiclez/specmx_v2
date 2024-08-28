@@ -27,7 +27,7 @@ function appendMessage(sender, message) {
 function getBotResponse(userInput) {
     // Placeholder for bot response logic
     // Replace this with actual bot integration
-    return 'Este es un mensaje de respuesta automática de SPEC-IA.';
+    return 'Agradecemos tu interés en SPEC-IA, actualmente en desarrollo. Pronto disponible';
 }
 // JavaScript para manejar el cambio de contenido basado en el dropdown
 document.addEventListener('DOMContentLoaded', function() {

@@ -107,7 +107,7 @@
                      </div>
                      <div class="col-md-4 col-sm-4 d_none">
                         <ul class="conta_icon ">
-                           <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> demo@gmail.com</a> </li>
+                           <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@specmx.net</a> </li>
                         </ul>
                      </div>
                   </div>
@@ -221,60 +221,92 @@
          </div>
      </div>
 
-      <div class="row">
-         <div class="col-md-3">
-            <div class="about_box">
-               <img src="images/icon-legal.png" alt="Jurídico" class="about_icon">
-               <h3>Jurídico</h3>
-               <p>Ofrecemos defensa fiscal y servicios legales que garantizan la protección de sus intereses empresariales.</p>
-               <ul>
-                  <li>Defensa Fiscal</li>
-                  <li>Contratos</li>
-                  <li>Libro Societario</li>
-                  <li>Amparo</li>
-               </ul>
-            </div>
-         </div>
-         <div class="col-md-3">
-            <div class="about_box">
-               <img src="images/icon-accounting.png" alt="Contable" class="about_icon">
-               <h3>Contable</h3>
-               <p>Gestionamos sus finanzas con precisión, asegurando el cumplimiento fiscal y la optimización financiera.</p>
-               <ul>
-                  <li>Registro Contable</li>
-                  <li>Estados Financieros</li>
-                  <li>Cumplimiento Fiscal</li>
-                  <li>Auditorías</li>
-               </ul>
-            </div>
-         </div>
-         <div class="col-md-3">
-            <div class="about_box">
-               <img src="images/icon-corporate.png" alt="Corporativo" class="about_icon">
-               <h3>Corporativo</h3>
-               <p>Desarrollamos estrategias corporativas que impulsan el crecimiento y protegen sus activos.</p>
-               <ul>
-                  <li>Gobierno Corporativo</li>
-                  <li>Planeación Fiscal</li>
-                  <li>Protección Patrimonial</li>
-                  <li>NIF C08</li>
-               </ul>
-            </div>
-         </div>
-         <div class="col-md-3">
-            <div class="about_box">
-               <img src="images/icon-payroll.png" alt="Nóminas" class="about_icon">
-               <h3>Nóminas</h3>
-               <p>Automatizamos y gestionamos sus nóminas para asegurar precisión y cumplimiento.</p>
-               <ul>
-                  <li>Cálculo de Nóminas</li>
-                  <li>Timbrado y Envío</li>
-                  <li>Conciliación SUA</li>
-                  <li>Revisión IMSS e Infonavit</li>
-               </ul>
-            </div>
-         </div>
-      </div>
+     <style>
+      .about_box {
+          position: relative;
+          overflow: hidden;
+          text-align: center;
+          padding: 20px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          transition: box-shadow 0.3s ease;
+      }
+  
+      .about_box:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+  
+      .btn-primary {
+          display: none;
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: opacity 0.3s ease;
+      }
+  
+      .about_box:hover .btn-primary {
+          display: block;
+          opacity: 1;
+      }
+  </style>
+  
+  <div class="row">
+     <div class="col-md-4">
+        <div class="about_box">
+           <img src="images/icon-legal.png" alt="Asesoría Legal" class="about_icon">
+           <h3>Asesoría Legal</h3>
+           <p>Brindamos soluciones jurídicas integrales para proteger y defender los intereses de tu empresa.</p>
+           <button class="btn btn-primary">Ver más</button>
+        </div>
+     </div>
+     <div class="col-md-4">
+        <div class="about_box">
+           <img src="images/icon-accounting.png" alt="Servicios Contables" class="about_icon">
+           <h3>Servicios Contables</h3>
+           <p>Gestionamos y optimizamos tus finanzas, asegurando el cumplimiento fiscal con precisión.</p>
+           <button class="btn btn-primary">Ver más</button>
+        </div>
+     </div>
+     <div class="col-md-4">
+        <div class="about_box">
+           <img src="images/icon-corporate.png" alt="Servicios Corporativos" class="about_icon">
+           <h3>Servicios Corporativos</h3>
+           <p>Desarrollamos estrategias para el crecimiento y la protección patrimonial de tu empresa.</p>
+           <button class="btn btn-primary">Ver más</button>
+        </div>
+     </div>
+  </div>
+  
+  <div class="row" style="margin-top: 20px;">
+   <div class="col-md-4">
+        <div class="about_box">
+           <img src="images/icon-hr.png" alt="Gestión de Recursos Humanos" class="about_icon">
+           <h3>Gestión de Recursos Humanos</h3>
+           <p>Administramos y optimizamos tus procesos de nóminas y recursos humanos.</p>
+           <button class="btn btn-primary">Ver más</button>
+        </div>
+     </div>
+     <div class="col-md-4">
+        <div class="about_box">
+           <img src="images/icon-financial.png" alt="Servicios Comerciales y Financieros" class="about_icon">
+           <h3>Servicios Comerciales y Financieros</h3>
+           <p>Te apoyamos en la comercialización, gestión financiera y expansión de tu negocio.</p>
+           <button class="btn btn-primary">Ver más</button>
+        </div>
+     </div>
+     <div class="col-md-4">
+        <div class="about_box">
+           <img src="images/icon-realestate.png" alt="Servicios Inmobiliarios" class="about_icon">
+           <h3>Servicios Inmobiliarios</h3>
+           <p>Ofrecemos consultoría y gestión en compra, venta y arrendamiento de inmuebles.</p>
+           <button class="btn btn-primary">Ver más</button>
+        </div>
+     </div>
+  </div>
+  
+   
+   
    </div>
 </div>
 
@@ -761,16 +793,16 @@
                    <img src="images/clientesysocios/autopronto.png" class="client_logo" alt="Cliente 2">
                    <img src="images/clientesysocios/capability.png" class="client_logo" alt="Cliente 4">
                    <img src="images/clientesysocios/coss.png" class="client_logo" alt="Cliente 5">
-                   <img src="images/clientesysocios/Dicoma.png" class="client_logo" alt="Cliente 6">
-                   <img src="images/clientesysocios/grupo_ieg_logo.jpeg" class="client_logo" alt="Cliente 7">
-                   <img src="images/clientesysocios/jaco.jpg" class="client_logo" alt="Cliente 8">
-                   <img src="images/clientesysocios/juache.jpeg" class="client_logo" alt="Cliente 10">
+                   <img src="images/clientesysocios/dicoma.png" class="client_logo" alt="Cliente 6">
+                   <img src="images/clientesysocios/ieg.png" class="client_logo" alt="Cliente 7">
+                   <img src="images/clientesysocios/jaco.png" class="client_logo" alt="Cliente 8">
+                   <img src="images/clientesysocios/juache.png" class="client_logo" alt="Cliente 10">
                    <img src="images/clientesysocios/knesys.png" class="client_logo" alt="Cliente 11">
-                   <img src="images/clientesysocios/Logo_Qualtop_(R)_TR (1).png" class="client_logo" alt="Cliente 12">
+                   <img src="images/clientesysocios/qualtop.png" class="client_logo" alt="Cliente 12">
                    <img src="images/clientesysocios/schulz.png" class="client_logo" alt="Cliente 15">
                    <img src="images/clientesysocios/sercom.png" class="client_logo" alt="Cliente 16">
                    <img src="images/clientesysocios/sofma.png" class="client_logo" alt="Cliente 17">
-                   <img src="images/clientesysocios/SYE_logo.png" class="client_logo" alt="Cliente 18">
+                   <img src="images/clientesysocios/sye.png" class="client_logo" alt="Cliente 18">
                    <img src="images/clientesysocios/tapones.png" class="client_logo" alt="Cliente 19">
                </div>
            </div>
