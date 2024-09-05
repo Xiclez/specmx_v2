@@ -29,6 +29,7 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <script src="https://kit.fontawesome.com/5fb66b449c.js" crossorigin="anonymous"></script>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -147,84 +148,162 @@
       <div class="row">
          <div class="col-md-7">
             <div class="titlepage">
-               <h2><strong class="yellow">Servicios</strong><br> Podemos Ayudar a Tu Negocio a Crecer</h2>
+               <h2><strong class="yellow">Servicios</strong><br> Podemos Ayudar a Crecer Tu Negocio </h2>
             </div>
          </div>
       </div>
+      <style>
+         h3:hover, p.subtitle:hover {
+            color: #ffcc00; /* Cambia al color amarillo al hacer hover */
+            cursor: pointer; /* Cambia el cursor a puntero */
+         }
+      
+         p.subtitle {
+            cursor: pointer; /* Cambia el cursor a puntero por defecto */
+         }
+
+         .fixed-size {
+    width: 50%; /* Adjust the percentage as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+      </style>
+      
       <div class="row">
+         <!-- Asesoría Legal -->
          <div class="col-md-4 col-sm-6">
-            <div id="ho_color" class="service_box" onclick="toggleDescription('juridico')">
-               <img src="images/service_icon1.png" alt="#"/>
+            <div id="ho_color" class="service_box">
+               <img src="images/icon-legal.png" alt="#" class="fixed-size"/>
                <h3>Asesoría Legal</h3>
-               <div id="juridico" style="display: none;">
-                  <p>Asesoría en Derecho: Administrativo, civil, mercantil, fiscal, laboral, y corporativo.</p>
-                  <p>Contratos y Convenios: Elaboración, revisión, y negociación.</p>
-                  <p>Representación Judicial: Defensa en litigios, amparos, y juicios diversos.</p>
-                  <p>Gestión de Trámites: Obtención de autorizaciones, permisos y licitaciones.</p>
+               <div>
+                  <p class="subtitle" onclick="toggleDescription('juridicoDesc1')"><i class="fa fa-gavel"></i> Asesoría en Derecho:</p>
+                  <p id="juridicoDesc1" style="display:none;">Administrativo, civil, mercantil, fiscal, laboral, y corporativo.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('juridicoDesc2')"><i class="fa fa-file-text"></i> Contratos y Convenios:</p>
+                  <p id="juridicoDesc2" style="display:none;">Elaboración, revisión, y negociación.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('juridicoDesc3')"><i class="fa fa-balance-scale"></i> Representación Judicial:</p>
+                  <p id="juridicoDesc3" style="display:none;">Defensa en litigios, amparos, y juicios diversos.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('juridicoDesc4')"><i class="fa fa-clipboard"></i> Gestión de Trámites:</p>
+                  <p id="juridicoDesc4" style="display:none;">Obtención de autorizaciones, permisos y licitaciones.</p>
                </div>
             </div>
          </div>
+      
+         <!-- Servicios Contables -->
          <div class="col-md-4 col-sm-6">
-            <div id="ho_color" class="service_box" onclick="toggleDescription('contable')">
-               <img src="images/service_icon2.png" alt="#"/>
+            <div id="ho_color" class="service_box">
+               <img src="images/icon-accounting.png" alt="#" class="fixed-size"/>
                <h3>Servicios Contables</h3>
-               <div id="contable" style="display: none;">
-                  <p>Contabilidad General: Registro de operaciones y elaboración de estados financieros.</p>
-                  <p>Planeación Fiscal: Optimización de impuestos y cumplimiento fiscal.</p>
-                  <p>Auditorías: Internas y externas, evaluación de la información financiera.</p>
-                  <p>Consultoría Contable: Asesoría en normativas contables y procesos financieros.</p>
+               <div>
+                  <p class="subtitle" onclick="toggleDescription('contableDesc1')"><i class="fa fa-calculator"></i> Contabilidad General:</p>
+                  <p id="contableDesc1" style="display:none;">Registro de operaciones y elaboración de estados financieros.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('contableDesc2')"><i class="fa fa-line-chart"></i> Planeación Fiscal:</p>
+                  <p id="contableDesc2" style="display:none;">Optimización de impuestos y cumplimiento fiscal.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('contableDesc3')"><i class="fa fa-search"></i> Auditorías:</p>
+                  <p id="contableDesc3" style="display:none;">Internas y externas, evaluación de la información financiera.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('contableDesc4')"><i class="fa fa-briefcase"></i> Consultoría Contable:</p>
+                  <p id="contableDesc4" style="display:none;">Asesoría en normativas contables y procesos financieros.</p>
                </div>
             </div>
          </div>
+      
+         <!-- Servicios Corporativos -->
          <div class="col-md-4 col-sm-6">
-            <div id="ho_color" class="service_box" onclick="toggleDescription('corporativo')">
-               <img src="images/service_icon3.png" alt="#"/>
+            <div id="ho_color" class="service_box">
+               <img src="images/icon-corporate.png" alt="#" class="fixed-size"/>
                <h3>Servicios Corporativos</h3>
-               <div id="corporativo" style="display: none;">
-                  <p>Gobierno Corporativo: Implementación de buenas prácticas y políticas.</p>
-                  <p>Constitución y Administración de Sociedades: Asesoría en la formación y manejo corporativo.</p>
-                  <p>Protección Patrimonial: Estrategias para preservar el patrimonio de la empresa.</p>
-                  <p>Fusiones y Adquisiciones: Asesoría en procesos de M&A y reorganizaciones corporativas.</p>
+               <div>
+                  <p class="subtitle" onclick="toggleDescription('corporativoDesc1')"><i class="fa fa-building"></i> Gobierno Corporativo:</p>
+                  <p id="corporativoDesc1" style="display:none;">Implementación de sanas prácticas corporativas y cumplimiento de normativas empresariales.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('corporativoDesc2')"><i class="fa fa-check-square"></i> Sanas Prácticas Corporativas:</p>
+                  <p id="corporativoDesc2" style="display:none;">Asesoría en la adopción de estándares corporativos para una gestión empresarial eficaz.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('corporativoDesc3')"><i class="fa fa-line-chart"></i>Valuación y Evaluación de Proyectos:</p>
+                  <p id="corporativoDesc3" style="display:none;">Determinación del valor de proyectos y análisis de su viabilidad.</p>
                </div>
             </div>
          </div>
+      
+         <!-- Gestión de Recursos Humanos -->
          <div class="col-md-4 col-sm-6">
-            <div id="ho_color" class="service_box" onclick="toggleDescription('recursos_humanos')">
-               <img src="images/service_icon4.png" alt="#"/>
+            <div id="ho_color" class="service_box">
+               <img src="images/icon-hr.png" alt="#" class="fixed-size"/>
                <h3>Gestión de Recursos Humanos</h3>
-               <div id="recursos_humanos" style="display: none;">
-                  <p>Administración de Nóminas: Cálculo y procesamiento de nóminas.</p>
-                  <p>Capacitación y Desarrollo: Programas de formación y adiestramiento de personal.</p>
-                  <p>Consultoría en Recursos Humanos: Asesoría en administración de personal y gestión de talento.</p>
-                  <p>Subcontratación de Personal: Contratación de profesionales y técnicos especializados.</p>
+               <div>
+                  <p class="subtitle" onclick="toggleDescription('recursosDesc1')"><i class="fa fa-users"></i> Administración de Nóminas:</p>
+                  <p id="recursosDesc1" style="display:none;">Cálculo y procesamiento de nóminas.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('recursosDesc2')"><i class="fa fa-users"></i> Capacitación y Desarrollo:</p>
+                  <p id="recursosDesc2" style="display:none;">Programas de formación y adiestramiento de personal.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('recursosDesc3')"><i class="fa fa-briefcase"></i> Consultoría en Recursos Humanos:</p>
+                  <p id="recursosDesc3" style="display:none;">Asesoría en administración de personal y gestión de talento.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('recursosDesc4')"><i class="fa fa-briefcase"></i> Subcontratación de Personal:</p>
+                  <p id="recursosDesc4" style="display:none;">Contratación de profesionales y técnicos especializados.</p>
                </div>
             </div>
          </div>
+      
+         <!-- Servicios Comerciales y Financieros -->
          <div class="col-md-4 col-sm-6">
-            <div id="ho_color" class="service_box" onclick="toggleDescription('comercial')">
-               <img src="images/service_icon5.png" alt="#"/>
+            <div id="ho_color" class="service_box">
+               <img src="images/icon-financial.png" alt="#" class="fixed-size"/>
                <h3>Servicios Comerciales y Financieros</h3>
-               <div id="comercial" style="display: none;">
-                  <p>Asesoría en Comercialización: Estrategias de venta, promoción y distribución.</p>
-                  <p>Gestión de Importaciones y Exportaciones: Facilitación de comercio internacional.</p>
-                  <p>Operaciones de Crédito y Arrendamiento: Financiación y leasing de equipos y bienes.</p>
-                  <p>Consultoría Financiera: Planeación financiera y optimización de recursos.</p>
+               <div>
+                  <p class="subtitle" onclick="toggleDescription('comercialDesc1')"><i class="fa fa-chart-bar"></i> Asesoría en Comercialización:</p>
+                  <p id="comercialDesc1" style="display:none;">Estrategias de venta, promoción y distribución.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('comercialDesc2')"><i class="fa fa-ship"></i> Gestión de Importaciones y Exportaciones:</p>
+                  <p id="comercialDesc2" style="display:none;">Facilitación de comercio internacional.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('comercialDesc3')"><i class="fa fa-credit-card"></i> Operaciones de Crédito y Arrendamiento:</p>
+                  <p id="comercialDesc3" style="display:none;">Financiación y leasing de equipos y bienes.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('comercialDesc4')"><i class="fa fa-piggy-bank"></i> Consultoría Financiera:</p>
+                  <p id="comercialDesc4" style="display:none;">Planeación financiera y optimización de recursos.</p>
                </div>
             </div>
          </div>
+      
+         <!-- Servicios Inmobiliarios -->
          <div class="col-md-4 col-sm-6">
-            <div id="ho_color" class="service_box" onclick="toggleDescription('inmobiliario')">
-               <img src="images/service_icon6.png" alt="#"/>
+            <div id="ho_color" class="service_box">
+               <img src="images/icon-realestate.png" alt="#" class="fixed-size"/>
                <h3>Servicios Inmobiliarios</h3>
-               <div id="inmobiliario" style="display: none;">
-                  <p>Compra y Venta de Inmuebles: Adquisición y enajenación de bienes raíces.</p>
-                  <p>Arrendamiento: Gestión de contratos de alquiler y subarrendamiento.</p>
-                  <p>Desarrollo Inmobiliario: Construcción y desarrollo de proyectos inmobiliarios.</p>
-                  <p>Consultoría en Bienes Raíces: Asesoría en inversiones inmobiliarias.</p>
+               <div>
+                  <p class="subtitle" onclick="toggleDescription('inmobiliarioDesc1')"><i class="fa fa-home"></i> Compra y Venta de Inmuebles:</p>
+                  <p id="inmobiliarioDesc1" style="display:none;">Adquisición y enajenación de bienes raíces.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('inmobiliarioDesc2')"><i class="fa fa-file-contract"></i> Arrendamiento:</p>
+                  <p id="inmobiliarioDesc2" style="display:none;">Gestión de contratos de alquiler y subarrendamiento.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('inmobiliarioDesc3')"><i class="fa fa-building"></i> Desarrollo Inmobiliario:</p>
+                  <p id="inmobiliarioDesc3" style="display:none;">Construcción y desarrollo de proyectos inmobiliarios.</p>
+                  
+                  <p class="subtitle" onclick="toggleDescription('inmobiliarioDesc4')"><i class="fa fa-search-location"></i> Consultoría en Bienes Raíces:</p>
+                  <p id="inmobiliarioDesc4" style="display:none;">Asesoría en inversiones inmobiliarias.</p>
                </div>
             </div>
          </div>
       </div>
+      
+      <script>
+         function toggleDescription(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+               element.style.display = "block";
+            } else {
+               element.style.display = "none";
+            }
+         }
+      </script>
+      
    </div>
 </div>
 <!-- service section end -->

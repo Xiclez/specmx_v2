@@ -21,7 +21,7 @@
    <link rel="stylesheet" href="css/responsive.css">
    <link rel="stylesheet" href="css/owl.carousel.min.css">
    <!-- fevicon -->
-   <link rel="icon" href="images/SPECMX2.png" type="image/gif" />
+   <link rel="icon" href="images/SPECMX2.png" type="image/gif">
    <!-- Scrollbar Custom CSS -->
    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
@@ -172,23 +172,31 @@
          <div class="col-md-7 col-lg-7">
             <div class="text-bg">
                <!-- Headers aleatorios -->
-               <div class="random-header">
-                  <h1>Tu socio estratégico en consultoría empresarial, impulsando crecimiento y excelencia</h1>
-               </div>
-               <div class="random-header">
-                  <h1>Soluciones inteligentes y personalizadas para alcanzar tus objetivos corporativos</h1>
-               </div>
-               <div class="random-header">
-                  <h1>Comprometidos con tu éxito: Consultoría de calidad en jurídico, contable, corporativo y nóminas</h1>
-               </div>
-               <div class="random-header">
-                  <h1>Transformando desafíos en oportunidades: Consultoría integral a tu medida</h1>
-               </div>
-               <div class="random-header">
-                  <h1>Excelencia y confianza en cada servicio: Liderando el camino hacia el éxito empresarial</h1>
-               </div>
-               <a href="#">Sobre nosotros</a>
-            </div>
+<div class="random-header" style="display: none;">
+   <h1>Tu socio estratégico en consultoría empresarial, impulsando crecimiento y excelencia</h1>
+</div>
+<div class="random-header" style="display: none;">
+   <h1>Soluciones inteligentes y personalizadas para alcanzar tus objetivos corporativos</h1>
+</div>
+<div class="random-header" style="display: none;">
+   <h1>Comprometidos con tu éxito: Consultoría de calidad en jurídico, contable, corporativo y nóminas</h1>
+</div>
+<div class="random-header" style="display: none;">
+   <h1>Transformando desafíos en oportunidades: Consultoría integral a tu medida</h1>
+</div>
+<div class="random-header" style="display: none;">
+   <h1>Excelencia y confianza en cada servicio: Liderando el camino hacia el éxito empresarial</h1>
+</div>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+       const headers = document.querySelectorAll('.random-header');
+       const randomIndex = Math.floor(Math.random() * headers.length);
+       headers[randomIndex].style.display = 'block';
+   });
+</script>
+
+            
          </div>
         
       </div>
@@ -257,24 +265,21 @@
            <img src="images/icon-legal.png" alt="Asesoría Legal" class="about_icon">
            <h3>Asesoría Legal</h3>
            <p>Brindamos soluciones jurídicas integrales para proteger y defender los intereses de tu empresa.</p>
-           <button class="btn btn-primary">Ver más</button>
-        </div>
+           <button class="btn btn-primary" onclick="window.location.href='service.html'">Ver más</button>        </div>
      </div>
      <div class="col-md-4">
         <div class="about_box">
            <img src="images/icon-accounting.png" alt="Servicios Contables" class="about_icon">
            <h3>Servicios Contables</h3>
            <p>Gestionamos y optimizamos tus finanzas, asegurando el cumplimiento fiscal con precisión.</p>
-           <button class="btn btn-primary">Ver más</button>
-        </div>
+           <button class="btn btn-primary" onclick="window.location.href='service.html'">Ver más</button>        </div>
      </div>
      <div class="col-md-4">
         <div class="about_box">
            <img src="images/icon-corporate.png" alt="Servicios Corporativos" class="about_icon">
            <h3>Servicios Corporativos</h3>
            <p>Desarrollamos estrategias para el crecimiento y la protección patrimonial de tu empresa.</p>
-           <button class="btn btn-primary">Ver más</button>
-        </div>
+           <button class="btn btn-primary" onclick="window.location.href='service.html'">Ver más</button>        </div>
      </div>
   </div>
   
@@ -284,24 +289,21 @@
            <img src="images/icon-hr.png" alt="Gestión de Recursos Humanos" class="about_icon">
            <h3>Gestión de Recursos Humanos</h3>
            <p>Administramos y optimizamos tus procesos de nóminas y recursos humanos.</p>
-           <button class="btn btn-primary">Ver más</button>
-        </div>
+           <button class="btn btn-primary" onclick="window.location.href='service.html'">Ver más</button>        </div>
      </div>
      <div class="col-md-4">
         <div class="about_box">
            <img src="images/icon-financial.png" alt="Servicios Comerciales y Financieros" class="about_icon">
            <h3>Servicios Comerciales y Financieros</h3>
            <p>Te apoyamos en la comercialización, gestión financiera y expansión de tu negocio.</p>
-           <button class="btn btn-primary">Ver más</button>
-        </div>
+           <button class="btn btn-primary" onclick="window.location.href='service.html'">Ver más</button>        </div>
      </div>
      <div class="col-md-4">
         <div class="about_box">
            <img src="images/icon-realestate.png" alt="Servicios Inmobiliarios" class="about_icon">
            <h3>Servicios Inmobiliarios</h3>
            <p>Ofrecemos consultoría y gestión en compra, venta y arrendamiento de inmuebles.</p>
-           <button class="btn btn-primary">Ver más</button>
-        </div>
+           <button class="btn btn-primary" onclick="window.location.href='service.html'">Ver más</button>        </div>
      </div>
   </div>
   
@@ -362,16 +364,78 @@
                   <div class="col-md-6">
                      <h3><strong class="yellow">Dólar Americano (USD)</strong></h3>
                      <p><strong>Precio más reciente (Compra venta casa de cambio): </strong><span id="latestUSDPrice"></span></p>
+                     
+                     <!-- Date Pickers -->
+                     <div class="form-group">
+                        <label for="startDate">Fecha Inicio:</label>
+                        <input type="date" id="startDate" class="form-control" style="width: 25%;">
+                     </div>
+                     <div class="form-group">
+                        <label for="endDate">Fecha Fin:</label>
+                        <input type="date" id="endDate" class="form-control" style="width: 25%;">
+                     </div>
+                     
+                     <!-- Consultar Button -->
+                     <button id="consultarButton" class="btn btn-primary mt-2" onclick="fetchUSDData()">Consultar</button>
+                  
+                     <!-- Chart Container -->
                      <div id="usdChartContainer" style="width: 100%; height: 300px;">
                         <canvas id="usdChart"></canvas>
                      </div>
+                  
                      <p>Fuente: <a href="https://www.banxico.org.mx/tipcamb/tipCamMIAction.do" target="_blank">Banco de México</a></p>
                   </div>
+                  
+               </div>
+               
                   <div class="banner">
     <marquee behavior="scroll" direction="left">
         Nota Temporal: Se espera una volatilidad del dólar frente a todas las monedas, particularmente con una presión hacia el dólar por factores internos que tienen que ver con la reforma jurídica de elección de jueces por mandato popular que le crea presiones a los inversionistas extranjeros. Se espera una depreciación de al menos el 20 % en el corto y mediano plazo.
     </marquee>
 </div>
+
+<div class="banner" style="background-color: #ffd700; text-align: center; padding: 10px;">
+   <p>Para saber más sobre los efectos de esta reforma, te invitamos a leer este artículo de nuestro blog:</p>
+   <a href="blog_details.html?id=66d9fc978de229b7a4622e17" class="btn btn-primary">Leer Artículo</a>
+</div>
+
+<!-- Postcard Section -->
+<div id="postcardSection">
+   <a href="blog_details.html?id=66d9fc978de229b7a4622e17" class="block hover:shadow-lg transition duration-300 ease-in-out">
+      <div class="postcard-section bg-yellow-100 p-6 border border-yellow-300 rounded-lg mt-8">
+         <div class="container mx-auto">
+             <a href="blog_details.html?id=66d9fc978de229b7a4622e17">
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                     <div class="col-span-1">
+                         <img src="https://res.cloudinary.com/dgyepdjut/image/upload/v1725561877/DALL_E_2024-09-05_12.43.45_-_An_image_representing_the_reform_of_the_judiciary_in_Mexico_showing_a_balance_scale_symbolizing_justice_with_the_Mexican_flag_in_the_background._The_y6eil8.webp" alt="Postcard Image" class="w-1/2 mx-auto">
+                     </div>
+                     <div class="col-span-2">
+                         <h3 class="text-xl font-bold">Efectos de la Reforma Jurídica en 2024</h3>
+                         <p class="text-gray-700 mt-2">La reciente reforma al Poder Judicial en México ha generado un impacto significativo en los sectores financieros, legales, y políticos del país. En este artículo, exploramos las implicaciones clave de la reforma y su posible efecto en la estabilidad económica.</p>
+                         <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Leer Artículo Completo</button>
+                     </div>
+                 </div>
+             </a>
+         </div>
+      </div>
+   </a>
+</div>
+
+<script>
+// Dynamically load TailwindCSS when the postcard section is rendered
+const postcardSection = document.getElementById('postcardSection');
+
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+
+// Append the link to the head when postcard section is displayed
+document.head.appendChild(link);
+</script>
+
+
+
+
                   <div class="col-md-6">
                      <h3><strong class="yellow">Índice de Precios y Cotizaciones (IPC)</strong></h3>
                      <p><strong>Valor más reciente del IPC: </strong><span id="ipcIndex"></span></p>
@@ -430,35 +494,99 @@
            </div>
        </div>
        <div class="row" id="blog-preview-container">
-           <!-- Blog posts will be dinámicamente inserted here -->
+           <!-- Blog posts will be dynamically inserted here -->
+       </div>
+       <!-- "Ver más" button at the bottom of the blog previews -->
+       <div class="row">
+           <div class="col-md-12 text-center">
+               <button class="btn btn-primary" onclick="window.location.href='blog.html'">Ver más</button>
+           </div>
        </div>
    </div>
 </section>
+
+<style>
+.nuevo-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 150px; /* Adjust size as necessary */
+}
+
+.postcard-section {
+    background-color: #fff3cd;
+    padding: 20px;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit; /* Mantener el color del texto original */
+}
+
+.card-link:hover {
+    text-decoration: none; /* Evitar subrayado en el hover */
+    color: #007bff; /* Cambiar el color del texto en hover, opcional */
+}
+
+</style>
 <script>
    $(document).ready(function () {
-       fetch('http://specmx.net/api/blog/posts?limit=3')
-           .then(response => response.json())
-           .then(data => {
-               const blogContainer = document.getElementById('blog-preview-container');
-               data.forEach(post => {
-                   const postCard = document.createElement('div');
-                   postCard.className = 'col-md-4';
-                   postCard.innerHTML = `
-                       <div class="card mb-4">
-                           <img class="card-img-top" src="${post.images[0]}" alt="${post.title}">
-                           <div class="card-body">
-                               <h5 class="card-title">${post.title}</h5>
-                               <p class="card-text">${post.content.substring(0, 100)}...</p>
-                               <a href="blog_details.html?id=${post._id}" class="btn btn-primary">Leer más</a>
-                           </div>
-                       </div>
-                   `;
-                   blogContainer.appendChild(postCard);
-               });
-           })
-           .catch(error => console.error('Error fetching blog posts:', error));
+      fetch('http://specmx.net/api/blog/posts?limit=3')
+          .then(response => response.json())
+          .then(data => {
+              const blogContainer = document.getElementById('blog-preview-container');
+              const today = new Date();
+              // Ordenar los posts por fecha (más recientes primero)
+              data.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+              
+              data.forEach(post => {
+                  const postDate = new Date(post.fecha);
+                  const diffTime = Math.abs(today - postDate);
+                  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                  const isNew = diffDays <= 7 
+                      ? '<img src="images/nuevo-label.png" alt="Nuevo" class="nuevo-label" />' 
+                      : ''; // Asegúrate de que la ruta a la imagen sea correcta
+                  
+                  // Crear la tarjeta del post
+                  const postCard = document.createElement('div');
+                  postCard.className = 'col-md-4';
+                  
+                  // Hacer la tarjeta clickeable
+                  postCard.innerHTML = `
+                      <a href="blog_details.html?id=${post._id}" class="card-link">
+                          <div class="card mb-4">
+                              <div class="position-relative">
+                                  <img class="card-img-top" src="${post.images[0]}" alt="${post.title}">
+                                  ${isNew}
+                              </div>
+                              <div class="card-body">
+                                  <h5 class="card-title">${post.title}</h5>
+                                  <p class="card-text">${post.content.substring(0, 100)}...</p>
+                              </div>
+                          </div>
+                      </a>
+                  `;
+                  blogContainer.appendChild(postCard);
+              });
+          })
+          .catch(error => console.error('Error fetching blog posts:', error));
    });
 </script>
+
+   
 <!-- End Blog Preview Section -->
 
 
@@ -588,7 +716,7 @@
                               </div>
                               <div class="col-md-4 col-sm-6">
                                  <div id="ho_bg" class="team_img">
-                                    <img src="images/colabs/Ricky.jpeg" alt="#" class="img-fluid mx-auto d-block" />
+                                    <img src="images/colabs/Ricky2.jpeg" alt="#" class="img-fluid mx-auto d-block" />
                                     <div class="ho_socal">
                                        <ul class="social_icont">
                                           <li><a href="https://wa.link/ssyya2" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
@@ -810,10 +938,10 @@
 
 <!-- Mensaje de agradecimiento -->
 <div id="thankYouMessage" class="thank-you-message">
-   <img src="images/30-aniversario-bg.png" class="client_logo" alt="30 Aniversario">
-   <div class="container">
+   <div class="container d-flex align-items-center justify-content-center" style="min-height: 400px;">
        <div class="row">
-           <div class="col-md-12">
+           <div class="col-md-12 text-center">
+               <img src="images/30-aniversario-bg.png" class="client_logo mb-4" alt="30 Aniversario">
                <div class="titlepage">
                    <h2>Gracias a nuestros Clientes y Socios Estratégicos</h2>
                </div>
@@ -823,32 +951,57 @@
    </div>
 </div>
 
+
 <!-- Clientes/Socios Estratégicos -->
 <div id="clients" class="clients">
    <div class="container">
-       <div class="clients-carousel">
-           <div class="carousel-container">
-               <div class="carousel-track">
-                   <img src="images/clientesysocios/absa.jpg" class="client_logo" alt="Cliente 1">
-                   <img src="images/clientesysocios/autopronto.png" class="client_logo" alt="Cliente 2">
-                   <img src="images/clientesysocios/capability.png" class="client_logo" alt="Cliente 4">
-                   <img src="images/clientesysocios/coss.png" class="client_logo" alt="Cliente 5">
-                   <img src="images/clientesysocios/dicoma.png" class="client_logo" alt="Cliente 6">
-                   <img src="images/clientesysocios/ieg.png" class="client_logo" alt="Cliente 7">
-                   <img src="images/clientesysocios/jaco.png" class="client_logo" alt="Cliente 8">
-                   <img src="images/clientesysocios/juache.png" class="client_logo" alt="Cliente 10">
-                   <img src="images/clientesysocios/knesys.png" class="client_logo" alt="Cliente 11">
-                   <img src="images/clientesysocios/qualtop.png" class="client_logo" alt="Cliente 12">
-                   <img src="images/clientesysocios/schulz.png" class="client_logo" alt="Cliente 15">
-                   <img src="images/clientesysocios/sercom.png" class="client_logo" alt="Cliente 16">
-                   <img src="images/clientesysocios/sofma.png" class="client_logo" alt="Cliente 17">
-                   <img src="images/clientesysocios/sye.png" class="client_logo" alt="Cliente 18">
-                   <img src="images/clientesysocios/tapones.png" class="client_logo" alt="Cliente 19">
-               </div>
-           </div>
-       </div>
+      <div class="swiper-container">
+         <div class="swiper-wrapper">
+            <!-- Carousel items -->
+            <div class="swiper-slide"><img src="images/clientesysocios/absa.jpg" class="client_logo" alt="Cliente 1"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/autopronto.png" class="client_logo" alt="Cliente 2"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/capability.png" class="client_logo" alt="Cliente 3"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/coss.png" class="client_logo" alt="Cliente 4"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/dicoma.png" class="client_logo" alt="Cliente 5"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/ieg.png" class="client_logo" alt="Cliente 6"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/jaco.png" class="client_logo" alt="Cliente 7"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/juache.png" class="client_logo" alt="Cliente 8"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/knesys.png" class="client_logo" alt="Cliente 9"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/qualtop.png" class="client_logo" alt="Cliente 10"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/schulz.png" class="client_logo" alt="Cliente 11"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/sercom.png" class="client_logo" alt="Cliente 12"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/sofma.png" class="client_logo" alt="Cliente 13"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/sye.png" class="client_logo" alt="Cliente 14"></div>
+            <div class="swiper-slide"><img src="images/clientesysocios/tapones.png" class="client_logo" alt="Cliente 15"></div>
+         </div>
+         <!-- Add navigation arrows -->
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </div>
    </div>
 </div>
+
+<!-- SwiperJS Library -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+   const swiper = new Swiper('.swiper-container', {
+       loop: true, // Enable looping for infinite scrolling
+       slidesPerView: 5, // Show one image at a time
+       spaceBetween: 30, // Adjust spacing between images if needed
+       autoplay: {
+           delay: 0, // No delay between slides for a conveyor effect
+           disableOnInteraction: false, // Keep auto-scrolling even after interaction
+       },
+       speed: 3000, // Slow down the speed for a smooth scrolling effect
+       freeMode: true, // Enable continuous scrolling
+       freeModeMomentum: false, // Disable momentum so it moves at a consistent speed
+   });
+</script>
+
+
+
 
 <!-- contact section -->
 <div id="contact" class="contact">

@@ -205,20 +205,36 @@
             </div>
             
             <script>
-               $(document).ready(function () {
-                   // Reutilizar la función de fetch para obtener publicaciones
-                   fetch('http://specmx.net/api/blog/posts?limit=3')
-                       .then(response => response.json())
-                       .then(data => {
-                           const recentPostsFooter = document.getElementById('recent-posts-footer');
-                           data.forEach(post => {
-                               const postItem = document.createElement('li');
-                               postItem.innerHTML = `<a href="blog_details.html?id=${post._id}">${post.title}</a>`;
-                               recentPostsFooter.appendChild(postItem);
-                           });
-                       })
-                       .catch(error => console.error('Error fetching blog posts for footer:', error));
+                $(document).ready(function () {
+       fetch('http://specmx.net/api/blog/posts')
+           .then(response => response.json())
+           .then(data => {
+               const blogContainer = document.getElementById('blog-container');
+               const today = new Date();
+               data.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+               data.forEach(post => {
+                   const postDate = new Date(post.fecha);
+                   const diffTime = Math.abs(today - postDate);
+                   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                   const isNew = diffDays <= 7 ? '<span class="new-label">Nuevo</span>' : '';
+                   const postCard = document.createElement('div');
+                   postCard.className = 'col-md-4';
+                   postCard.innerHTML = `
+                       <div class="card mb-4">
+                           <img class="card-img-top" src="${post.images[0]}" alt="${post.title}">
+                           <div class="card-body">
+                               <h5 class="card-title">${post.title} ${isNew}</h5>
+                               <p class="card-text">${post.content.substring(0, 100)}...</p>
+                               <a href="blog_details.html?id=${post._id}" class="btn btn-primary">Leer más</a>
+                           </div>
+                       </div>
+                   `;
+                   blogContainer.appendChild(postCard);
                });
+           })
+           .catch(error => console.error('Error fetching blog posts:', error));
+   });
+
             </script>
             
             <div class="col-lg-3 col-md-6 col-sm-6">
