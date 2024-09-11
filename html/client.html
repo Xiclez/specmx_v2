@@ -141,96 +141,141 @@
             </header>
             <!-- end header inner -->
             <!-- end header -->
+
       <!-- networking section -->
-<div id="networking" class="networking">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-12">
-            <div class="titlepage">
+
+
+      <style>
+
+.company-logo {
+   position: relative;
+   overflow: hidden;
+}
+
+.company-logo img {
+   transition: opacity 0.3s ease;
+}
+
+.company-logo .visitar-btn {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+   background-color: #ffcc00; /* Or any desired button color */
+   padding: 10px 20px;
+   color: #000;
+   font-weight: bold;
+   border-radius: 5px;
+   text-decoration: none;
+}
+
+.company-logo:hover img {
+   opacity: 0.5;
+}
+
+.company-logo:hover .visitar-btn {
+   display: block;
+}
+
+      </style>
+      <div id="networking" class="networking">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                  </div>
+               </div>
             </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-md-12">
-            <div class="banner">
-               <h2><strong class="yellow">División Construcción</strong></h2>
-            </div>
-            <div id="constructionCarousel" class="carousel slide" data-ride="carousel">
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="row">
-                        
-                        <div class="col-md-3">
-                           <a href="http://orvildev.xyz" target="_blank"><img src="images/Dicoma.png" alt="Grupo Integral Dicoma" class="d-block w-100"></a>
-                        </div>
-                        <div class="col-md-3">
-                           <a href="https://www.juachebarqs.com.mx/" target="_blank"><img src="images/juache.jpeg" alt="Juachebarqs" class="d-block w-100"></a>
-                        </div>
-                        <div class="col-md-3">
-                           <a href="https://unicom.com" target="_blank"><img src="images/logo6.png" alt="Unicom" class="d-block w-100"></a>
-                        </div>
-                        <div class="col-md-3">
-                           <a href="http://grupocosstruye.com/" target="_blank"><img src="images/coss.png" alt="Grupo Cosstruye" class="d-block w-100"></a>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner">
+                     <h2><strong class="yellow">División Construcción</strong></h2>
+                  </div>
+                  <div id="constructionCarousel" class="carousel slide" data-ride="carousel">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="row">
+                              <div class="col-md-3">
+                                 <div class="company-logo">
+                                    <img src="images/Dicoma.png" alt="Grupo Integral Dicoma" class="d-block w-100">
+                                    <a href="http://orvildev.xyz" target="_blank" class="visitar-btn">Visitar</a>
+                                 </div>
+                              </div>
+                              <div class="col-md-3">
+                                 <div class="company-logo">
+                                    <img src="images/juache.jpeg" alt="Juachebarqs" class="d-block w-100">
+                                    <a href="https://www.juachebarqs.com.mx/" target="_blank" class="visitar-btn">Visitar</a>
+                                 </div>
+                              </div>
+                              <div class="col-md-3">
+                                 <div class="company-logo">
+                                    <img src="images/logo6.png" alt="Unicom" class="d-block w-100">
+                                    <a href="https://unicom.com" target="_blank" class="visitar-btn">Visitar</a>
+                                 </div>
+                              </div>
+                              <div class="col-md-3">
+                                 <div class="company-logo">
+                                    <img src="images/coss.png" alt="Grupo Cosstruye" class="d-block w-100">
+                                    <a href="http://grupocosstruye.com/" target="_blank" class="visitar-btn">Visitar</a>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <a class="carousel-control-prev" href="#constructionCarousel" role="button" data-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="sr-only">Previous</span>
-               </a>
-               <a class="carousel-control-next" href="#constructionCarousel" role="button" data-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="sr-only">Next</span>
-               </a>
             </div>
-         </div>
-      </div>
-
-      <div class="row mt-5">
-         <div class="col-md-12">
-            <div class="banner">
-               <h2><strong class="yellow">División Tecnologías de la Información</strong></h2>
-
-            </div>
-            <div id="itCarousel" class="carousel slide" data-ride="carousel">
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="row">
-                        <div class="col-md-3">
-                           <a href="https://www.grupoabsa.com/" target="_blank"><img src="images/absa.jpg" alt="Grupo ABSA" class="d-block w-100"></a>
+      
+            <div class="row mt-5">
+               <div class="col-md-12">
+                  <div class="banner">
+                     <h2><strong class="yellow">División Tecnologías de la Información</strong></h2>
+                  </div>
+                  <div id="itCarousel" class="carousel slide" data-ride="carousel">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="row">
+                              <div class="col-md-3">
+                                 <div class="company-logo">
+                                    <img src="images/clientesysocios/absa.jpg" alt="Grupo ABSA" class="d-block w-100">
+                                    <a href="https://www.grupoabsa.com/" target="_blank" class="visitar-btn">Visitar</a>
+                                 </div>
+                              </div>
+                              <div class="col-md-3">
+                                 <div class="company-logo">
+                                    <img src="images/knesys.png" alt="Knesys Plus" class="d-block w-100">
+                                    <a href="https://knesysplus.com/index.htm" target="_blank" class="visitar-btn">Visitar</a>
+                                 </div>
+                              </div>
+                              <div class="col-md-3">
+                                 <div class="company-logo">
+                                    <img src="images/Logo_Qualtop_(R)_TR (1).png" alt="Qualtop Group" class="d-block w-100">
+                                    <a href="https://qualtop.com/" target="_blank" class="visitar-btn">Visitar</a>
+                                 </div>
+                              </div>
+                              <div class="col-md-3">
+                                 <div class="company-logo">
+                                    <img src="images/capability.png" alt="Capability Boosters" class="d-block w-100">
+                                    <a href="https://cpboosters.com/" target="_blank" class="visitar-btn">Visitar</a>
+                                 </div>
+                              </div>
+                              <div class="col-md-3">
+                                 <div class="company-logo">
+                                    <img src="images/SYE_logo.png" alt="SYE Software" class="d-block w-100">
+                                    <a href="https://www.syesoftware.com/" target="_blank" class="visitar-btn">Visitar</a>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                        <div class="col-md-3">
-                           <a href="https://knesysplus.com/index.htm" target="_blank"><img src="images/knesys.png" alt="Knesys Plus" class="d-block w-100"></a>
-                        </div>
-                        <div class="col-md-3">
-                           <a href="https://qualtop.com/" target="_blank"><img src="images/Logo_Qualtop_(R)_TR (1).png" alt="Qualtop Group" class="d-block w-100"></a>
-                        </div>
-                        <div class="col-md-3">
-                           <a href="https://cpboosters.com/" target="_blank"><img src="images/capability.png" alt="Capability Boosters" class="d-block w-100"></a>
-                        </div>
-                        <div class="col-md-3">
-                           <a href="https://www.syesoftware.com/" target="_blank"><img src="images/SYE_logo.png" alt="SYE Software" class="d-block w-100"></a>
-                        </div>
-                        
                      </div>
                   </div>
                </div>
-               <a class="carousel-control-prev" href="#itCarousel" role="button" data-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="sr-only">Previous</span>
-               </a>
-               <a class="carousel-control-next" href="#itCarousel" role="button" data-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="sr-only">Next</span>
-               </a>
             </div>
          </div>
       </div>
-   </div>
-</div>
-<!-- end networking section -->
-
+      <!-- end networking section -->
+      
 <!-- footer -->
 <footer>
    <div class="footer">
